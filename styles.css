@@ -1617,6 +1617,10 @@ section#clients {
 }
 
 .landing-gallery-item img.landing-image-ewu-billboard { object-position: center; }
+.landing-gallery-item img.landing-image-jumpin-jacs {
+  object-fit: contain;
+  object-position: center;
+}
 .landing-gallery-item img.landing-image-mockup-2 { object-position: center; }
 .landing-gallery-item video.landing-video-pointemap { object-position: center; }
 .landing-gallery-item video.landing-video-povanimation { object-position: center; }
