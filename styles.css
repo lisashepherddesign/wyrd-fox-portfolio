@@ -181,46 +181,9 @@ body { padding-top: 0 !important; }
 }
 .landing-copy a { color: #6aa36a; text-decoration: none; font-weight: 600; }
 
-.about-page .hero.landing { background: #fff; padding: 24px 0 48px; }
-.about-page .landing-inner {
-  align-items: flex-start;
-  justify-content: center;
-  gap: 42px;
-  padding: 92px 20px 24px;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-.about-page .landing-left { flex: 0 0 470px; }
-.about-page .landing-left-img {
-  width: 470px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  box-shadow: none;
-}
-.about-page .landing-copy {
-  flex: 0 0 540px;
-  max-width: 540px;
-  padding-top: 86px;
-}
-.about-page .intro-heading {
-  font-family: 'Manrope', sans-serif;
-  font-size: 42px;
-  line-height: 1.1;
-  margin: 0 0 18px;
-  letter-spacing: 0;
-  font-weight: 600;
-}
-.about-page .lead { display: none; }
-.about-page .landing-copy p {
-  margin: 0 0 18px;
-  font-size: 18px;
-  line-height: 1.25;
-  color: #2a2a2a;
-  text-wrap: pretty;
-}
-.about-page .landing-copy a { color: inherit; text-decoration: none; font-weight: 400; }
+.about-page .landing-left { flex-basis: 360px; }
+.about-page .landing-left-img { width: 360px; }
+.about-page .landing-copy p { font-size: 16px; line-height: 1.5; }
 
 @media (max-width: 1100px) {
   .landing-inner { gap: 28px; padding-top: 84px; }
@@ -228,11 +191,8 @@ body { padding-top: 0 !important; }
   .landing-left-img { width: 100%; max-width: 380px; }
   .intro-heading { font-size: 40px; }
   .landing-copy p { font-size: 18px; }
-
-  .about-page .landing-left { flex: 0 0 40%; }
-  .about-page .landing-left-img { width: 100%; max-width: 440px; }
-  .about-page .landing-copy { flex: 1 1 52%; max-width: 600px; padding-top: 26px; }
-  .about-page .intro-heading { font-size: 36px; }
+  .about-page .landing-left { flex-basis: 34%; }
+  .about-page .landing-left-img { width: 100%; max-width: 380px; }
 }
 
 @media (max-width: 700px) {
@@ -243,16 +203,14 @@ body { padding-top: 0 !important; }
   .landing-copy { text-align: center; padding: 0 18px; }
   .intro-heading { font-size: 28px; }
   .landing-copy p { font-size: 16px; }
-
-  .about-page .landing-left { width: 92vw; max-width: 470px; }
-  .about-page .landing-copy { text-align: left; padding: 0 10px; max-width: 92vw; }
-  .about-page .intro-heading { font-size: 30px; }
-  .about-page .landing-copy p { font-size: 18px; }
+  .about-page .landing-left { width: 90vw; max-width: 420px; }
+  .about-page .landing-left-img { width: 100%; }
 }
 
-h1 { font-family: 'Anton', sans-serif; font-size: 100px; margin: 8px 0 4px; letter-spacing: 2px; }
-h2 { font-family: 'Anton', sans-serif; font-size: 20px; margin: 0 0 12px; }
-p { font-size: 0.95rem; color: #555; }
+h1 { font-family: 'Anton', sans-serif; font-size: clamp(3rem, 8vw, 6rem); line-height: 0.95; margin: 8px 0 16px; letter-spacing: 1px; }
+h2 { font-family: 'Anton', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.1; margin: 0 0 16px; }
+h1, h2, h3, .branding-section-title { text-wrap: balance; }
+p { font-size: 1rem; line-height: 1.55; color: #555; text-wrap: pretty; orphans: 2; widows: 2; }
 p.teal { color: #8ab292; }
 /* Ensure teal class inside the hero overrides the #hero * inheritance rule */
 #hero .teal { color: #8ab292; }
@@ -322,7 +280,7 @@ p.teal { color: #8ab292; }
   .hero-img { width: 90vw; max-width:220px; margin-top:12px; }
   h1 { font-size: 1.5rem; margin:6px 0 6px; }
   h2 { font-size: 1rem; margin-bottom:8px; }
-  p { font-size: 0.95rem; padding: 0 4vw; }
+  p { font-size: 1rem; line-height: 1.5; padding: 0 4vw; }
 
   /* Galleries stack vertically */
   .ui-gallery-row, .Illustration-gallery { flex-direction:column; align-items:center; gap:18px; }
@@ -617,9 +575,9 @@ section#clients {
   :root { --nav-height: 56px; }
 
   /* typography */
-  html { font-size: 15px; }
-  h1 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); }
-  h2 { font-size: clamp(1.1rem, 4.2vw, 1.4rem); }
+  html { font-size: 16px; }
+  h1 { font-size: clamp(2rem, 7vw, 3rem); }
+  h2 { font-size: clamp(1.35rem, 4.5vw, 1.8rem); }
 
   /* hero */
   .hero { padding: 28px 12px; }
@@ -701,8 +659,8 @@ section#clients {
 .category-nav-item:active { color: #CB9973; }
 
 .category-header { text-align: left; margin: 20px 0 20px 33px; max-width: 1200px; padding: 0 20px 0 0; }
-.category-title { font-family: 'Anton', sans-serif; font-size: 24px; color: #111; margin: 0; }
-.category-subtitle { font-size: 14px; color: #666; margin: 12px 0 0; }
+.category-title { font-family: 'Anton', sans-serif; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1; color: #111; margin: 0; }
+.category-subtitle { font-size: 1rem; line-height: 1.5; color: #666; margin: 16px 0 0; }
 
 .category-content { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
@@ -767,10 +725,11 @@ section#clients {
 
 .ux-ui-page-title {
   font-family: 'Anton', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1;
   font-weight: 400;
   color: #111;
-  margin: 0 0 40px;
+  margin: 0 0 32px;
   letter-spacing: 0.02em;
 }
 
@@ -809,15 +768,16 @@ section#clients {
 
 .ux-project-title {
   font-family: 'Abacaxi', 'Manrope', system-ui, sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
   font-weight: 600;
   color: #111;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 }
 
 .ux-project-desc {
   font-family: 'Abacaxi', 'Manrope', system-ui, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: #333;
   margin: 0 0 24px;
@@ -1003,26 +963,32 @@ section#clients {
 }
 
 .knrd-copy-block {
-  max-width: 780px;
+  max-width: 68ch;
   margin: 0 auto 34px;
 }
 
 .knrd-section-title {
   font-family: 'Abacaxi', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 21px;
-  line-height: 1.25;
+  font-size: 24px;
+  line-height: 1.3;
   color: #111;
   margin: 0 0 16px;
   font-weight: 600;
 }
 
+.knrd-copy-block > .knrd-section-title {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
 .knrd-copy-block p,
 .knrd-process-copy p,
 .knrd-style-copy p {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   font-family: 'Abacaxi', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.22;
+  font-size: 16px;
+  line-height: 1.55;
   color: #333;
 }
 
@@ -1219,10 +1185,11 @@ section#clients {
 @media (max-width: 600px) {
   .knrd-copy-block p,
   .knrd-process-copy p,
-  .knrd-style-copy p,
-  .knrd-section-title {
+  .knrd-style-copy p {
     font-size: 16px;
   }
+  .knrd-section-title { font-size: 22px; }
+  .knrd-copy-block > .knrd-section-title { font-size: 26px; }
   .knrd-divider-image {
     width: 187px;
     height: 187px;
@@ -1260,13 +1227,16 @@ section#clients {
 }
 
 .ewu-copy-block {
+  max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 34px;
   text-align: left;
 }
 
 .ewu-section-title {
   font-family: 'Abacaxi', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 26px;
   line-height: 1.25;
   color: #111;
   margin: 0 0 18px;
@@ -1281,8 +1251,8 @@ section#clients {
 .ewu-process-copy p {
   margin: 0 0 18px;
   font-family: 'Abacaxi', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 16px;
+  line-height: 1.55;
   color: #333;
 }
 
@@ -1337,8 +1307,8 @@ section#clients {
 .ewu-process-subtitle {
   margin: 0 0 14px;
   font-family: 'Abacaxi', 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.3;
   color: #111;
   font-weight: 600;
 }
@@ -1385,7 +1355,7 @@ section#clients {
 }
 
 .branding-primary-title {
-  font-size: 24px;
+  font-size: 32px;
   letter-spacing: 0;
 }
 
@@ -1480,7 +1450,7 @@ section#clients {
     font-size: 32px;
     margin-bottom: 22px;
   }
-  .branding-primary-title { font-size: 24px; }
+  .branding-primary-title { font-size: 28px; }
   .branding-more-subtitle { font-size: 0.95rem; }
   .logos-row {
     justify-content: flex-start;
@@ -1491,7 +1461,7 @@ section#clients {
 
 @media (max-width: 900px) {
   .category-nav-top { right: 20px; top: 20px; gap: 20px; }
-  .category-title { font-size: 48px; }
+  .category-title { font-size: clamp(2.5rem, 6vw, 3rem); }
 
   .category-content {
     padding: 16px;
@@ -1521,7 +1491,7 @@ section#clients {
 @media (max-width: 600px) {
   .category-page { padding: 20px; }
   .category-nav-top { right: 20px; top: 20px; }
-  .category-title { font-size: 32px; }
+  .category-title { font-size: clamp(2rem, 8vw, 2.5rem); }
 
   .category-content {
     padding: 12px 0 0;
@@ -1532,13 +1502,12 @@ section#clients {
   }
 
   .category-title {
-    font-size: 28px;
     line-height: 1.05;
   }
 
   .category-subtitle {
-    font-size: 13px;
-    margin-top: 8px;
+    font-size: 0.95rem;
+    margin-top: 12px;
   }
 
   .category-topbar {
